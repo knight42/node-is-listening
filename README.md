@@ -30,7 +30,7 @@ assert(isListening('/var/run/docker.sock') === true)
 
 ```sh
 npm install
-npm run tsc
+npm run build
 npm test
 npm run lint
 ```

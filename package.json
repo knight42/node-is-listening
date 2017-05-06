@@ -1,0 +1,38 @@
+{
+  "name": "is-listening",
+  "version": "1.0.0",
+  "description": "Test whether socket is open and listening synchronously",
+  "main": "lib/index.js",
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "build": "tsc",
+    "lint": "tslint src/*.ts",
+    "test": "ava -v test/*.js"
+  },
+  "files": [
+    "binding.gyp",
+    "yarn.lock",
+    "lib/",
+    "src/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knight42/node-is-listening.git"
+  },
+  "keywords": [],
+  "author": "knight_42 <anonymousknight96@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knight42/node-is-listening/issues"
+  },
+  "homepage": "https://github.com/knight42/node-is-listening#readme",
+  "dependencies": {
+    "nan": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "ava": "^0.19.1",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}

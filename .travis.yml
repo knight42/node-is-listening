@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+  - 4
+  - 5
+  - 6
+  - 7
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - npm run build
+script:
+  - npm test
+  - npm run lint
+deploy:
+  provider: npm
+  email: anonymousknight96@gmail.com
+  skip_cleanup: true
+  on:
+    tags: true
+  api_key:
+    secure: kW28zOZlZObtOHxgfyvPgJf7z0uHuL1Wldhl3em71saSHctDOVfumrv5OC0BQ06oQ/P25zjrO7RYqZoLQ0j2a8FLXRxT/4fARuiqbh8a6fQ48SrxAWASD3Cqby+Y1MsH8Ryc3K8XT0e8Dadbn/GeJ/+FdfSEjG3vgVtbeE80UuxH8Z45AOjz8h75coss9H17mSJRm4zWni39XAEp06EIxHkMZ8GHN/DP14kmhJh3J99XiuWgfMyYCR8MgA7Tznv/WJzPxdsNIpUtx/31Av0v8GXxFFS2c1u+UIm1b10ZE9ooXwny+NjlHjDlXk1N9eLcDFs83PY2snICp2pIpmXuBNqjsLHlTZBfCOHrNzCa75+YxHMC3Lk+4dNf38r5wdMmgvBq/qKBsy9uR5sBQLjuBx5QMI+vRZDQv/DTilA2WBx5SV93Bs53YaVmugXFRY1AZJmkcZ8k9XmYlh1Ha16x3IlONL0dBopdKTGDdfmuS2emmV7lLH9GpD45fHMXUmL7ND4i7JMIf7MVDj8CrBdITtlEPpszeAW84PxLcyv6Os1jpf9F+vCUF7Hfn2HFQPV3Nhp2gt2lDgTPHhagFaeBkoZE97iRF0gMDSzAm4hDinu1IjPMKC+yFuo++aTHBu1iohOrhd6vM1YamrAzsoQceub5nQpj1cDyiKT1IZ3DWlc=
+  notifications:
+    webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
