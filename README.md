@@ -1,4 +1,4 @@
-# is-listening
+# is-listening [![Build Status](https://travis-ci.org/knight42/node-is-listening.svg?branch=master)](https://travis-ci.org/knight42/node-is-listening)
 
 Returns `true` if socket is open and listening.
 
